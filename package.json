@@ -1,0 +1,32 @@
+{
+  "name": "ga-traffic-simulator",
+  "version": "0.0.0",
+  "description": "A CLI to simulate traffic to google analytics",
+  "private": true,
+  "bin": {
+    "ga-traffic-simulator": "./bin/ga-traffic-simulator"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": {
+    "name": "Nathan Selvidge",
+    "email": "nselvidge@gmail.com",
+    "url": "https://github.com/nselvidge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nselvidge/ga-traffic-simulator"
+  },
+  "license": "MIT",
+  "bugs": "https://github.com/nselvidge/ga-traffic-simulator/issues",
+  "dependencies": {
+    "autocmdr": "~0.0.7",
+    "commander": "~2.0.0",
+    "universal-analytics": "^0.3.11"
+  },
+  "devDependencies": {
+    "bluebird": "^3.3.4",
+    "chai": "^3.5.0"
+  }
+}
