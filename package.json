@@ -23,6 +23,7 @@
     "autocmdr": "~0.0.7",
     "bluebird": "^3.3.4",
     "commander": "~2.0.0",
+    "underscore": "^1.8.3",
     "universal-analytics": "^0.3.11"
   },
   "devDependencies": {

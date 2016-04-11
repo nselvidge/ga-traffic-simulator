@@ -1,5 +1,6 @@
 'use strict';
 const Modifier = require('./modifier.js');
+const _ = require('underscore');
 
 /**
  * Generates hits to be sent to Google Analytics
@@ -46,11 +47,10 @@ class TrafficGenerator{
     const self = this;
 
     for(let i = 0; i < numberofHits; i++){
-
       let modifiedHit = self.modifiers.reduce((prev, curr, index) => {
         return self.modifiers[index].modify(prev);
-      }, self.defaultHit);
-
+      }, _.clone(self.defaultHit));
+      
       hits.push(modifiedHit);
     }
     return hits;

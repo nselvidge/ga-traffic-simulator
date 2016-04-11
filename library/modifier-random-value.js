@@ -24,8 +24,8 @@ class ModifierRandomValue extends Modifier{
       } else {
         hit = this.addRandomNumber(hit, configItem);
       }
-    })
-
+    });
+    
     return super.modify(hit);
   }
   /**
@@ -38,13 +38,11 @@ class ModifierRandomValue extends Modifier{
     const key = config.key;
     const range = config.range || [0, 1];
     let randomValue = Math.random() * (range[1] - range[0]);
-
     if(config.integerOnly){
       randomValue = Math.floor(randomValue);
     }
 
     randomValue += range[0];
-
     hit[key] = randomValue;
     return hit;
   }
