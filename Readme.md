@@ -1,5 +1,7 @@
 #ga-traffic-simulator
 
+[![Code Climate](https://codeclimate.com/github/nselvidge/ga-traffic-simulator/badges/gpa.svg)](https://codeclimate.com/github/nselvidge/ga-traffic-simulator)
+[ ![Codeship Status for nselvidge/ga-traffic-simulator](https://codeship.com/projects/704a0930-e260-0133-5673-0229a9d1976f/status?branch=master)](https://codeship.com/projects/145605)
 ## Description
 
 A CLI to simulate traffic to google analytics
@@ -12,7 +14,7 @@ To install ga-traffic-simulator from npm, run:
 $ npm install -g ga-traffic-simulator
 ```
 
-```node ./bin/ga-traffic-simulator --help```
+```ga-traffic-simulator --help```
 
 ## License
 
