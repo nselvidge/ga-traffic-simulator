@@ -6,7 +6,7 @@
     "ga-traffic-simulator": "./bin/ga-traffic-simulator"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "node_modules/mocha/bin/mocha test/*.js test/**/*.js"
   },
   "author": {
     "name": "Nathan Selvidge",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "bluebird": "^3.3.4",
     "chai": "^3.5.0",
+    "mocha": "^2.4.5",
     "nock": "^8.0.0",
     "sinon": "^1.17.3"
   }
