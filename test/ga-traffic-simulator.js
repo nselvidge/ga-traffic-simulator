@@ -11,15 +11,13 @@ describe('ga-traffic-simulator bin', function () {
 
   it('--help should run without errors', function (done) {
     exec(cmd + '--help', function (error, stdout, stderr) {
-      assert(!error);
-      done();
+      done(error);
     });
   });
 
   it('--version should run without errors', function (done) {
     exec(cmd + '--version', function (error, stdout, stderr) {
-      assert(!error);
-      done();
+      done(error);
     });
   });
 

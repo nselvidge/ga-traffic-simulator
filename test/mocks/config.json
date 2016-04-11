@@ -1,0 +1,14 @@
+{
+  "trackingId": "UA-76197038-1",
+  "host": "http://example.com",
+  "path": "/",
+  "title": "Sample Page",
+  "hits": 10,
+  "modifiers": {
+    "randomValue": [{
+      "key": "cd1",
+      "type": "discrete",
+      "range": ["Optimizely Experiment 1 - Variation 1", "Optimizely Experiment 1 - Variation 2"]
+    }]
+  }
+}

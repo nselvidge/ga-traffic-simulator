@@ -1,22 +1,37 @@
 'use strict';
 /**
- * Sends the traffic Objects to GA
+ * Sends the simulated hits to GA
  */
 const Promise = require('bluebird');
 const ua = Promise.promisifyAll(require('universal-analytics'));
 
-function TrafficSender(trackingId) {
-  this.trackingId = trackingId;
-  return this;
+class TrafficSender {
+  constructor(trackingId) {
+    if(!trackingId || typeof trackingId !== 'string'){
+      throw new Error('invalid or missing tracking ID.');
+    }
+    this.ua = ua;
+    this.trackingId = trackingId;
+    return this;
+  }
+  /**
+   * Sends an array of hits to Google Analytics
+   * 
+   * @param  {Array}                  data  an array of hits
+   * @return {Promise<Array, Error>}  
+   */
+  send(hits) {
+    const self = this;
+    if(!Array.isArray(hits)){
+      return Promise.reject(new Error('invalid format for hits to send. Must be an array of objects'));
+    }
+    const results = Promise.map(hits, (hit) => {
+      let visitor = ua(self.trackingId);
+      return visitor.pageview(hit).sendAsync();
+    });
+
+    return results;
+  }
 }
 
-TrafficSender.prototype.send = function(data) {
-  const self = this;
-  if(typeof data !== 'Array'){
-    throw new Error('invalid data format to send. Must be an array of objects');
-  }
-  data.forEach((hit) => {
-    let visitor = ua(self.trackingId);
-    visitor.pageview(hit).send();
-  })
-}
+module.exports = TrafficSender;
