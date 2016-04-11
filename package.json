@@ -21,6 +21,7 @@
   "bugs": "https://github.com/nselvidge/ga-traffic-simulator/issues",
   "dependencies": {
     "autocmdr": "~0.0.7",
+    "bluebird": "^3.3.4",
     "commander": "~2.0.0",
     "universal-analytics": "^0.3.11"
   },
