@@ -1,6 +1,6 @@
 {
   "name": "ga-traffic-simulator",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A CLI to simulate traffic to google analytics",
   "private": true,
   "bin": {
